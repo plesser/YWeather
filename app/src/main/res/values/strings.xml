@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">YWeather</string>
+    <string name="test_button">Тестовая кнопка</string>
+</resources>
