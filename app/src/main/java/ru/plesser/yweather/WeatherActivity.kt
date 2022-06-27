@@ -6,21 +6,27 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import ru.plesser.yweather.databinding.ActivityWeatherBinding
+import ru.plesser.yweather.fragments.WeatherFragment
 
 class WeatherActivity : AppCompatActivity() {
 
-    private val TAG = "YW_MainActivity"
-    private lateinit var testButton: Button;
+    lateinit var binding: ActivityWeatherBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_weather)
+        binding = ActivityWeatherBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        testButton = findViewById(R.id.test_button)
-        testButton.setOnClickListener(View.OnClickListener {
-                Log.d(TAG, "Нажали на тестовую кнопку")
-                Toast.makeText(this, "Нажали на тестовую кнопку", Toast.LENGTH_SHORT).show()
-            }
-        )
+        val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment_container);
+        if (currentFragment == null){
+            val fragment = WeatherFragment()
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.fragment_container, fragment)
+                .commit()
+        }
+
+
     }
 }
