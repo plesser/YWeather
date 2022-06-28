@@ -29,4 +29,11 @@
         android:text="@string/zero"
         android:textColor="@color/black" />
 
+    <Button
+        android:id="@+id/weather_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Получить погоду" />
+
 </LinearLayout>

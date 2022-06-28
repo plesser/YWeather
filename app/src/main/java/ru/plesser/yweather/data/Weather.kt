@@ -1,6 +1,7 @@
 package ru.plesser.yweather.data
 
 import java.util.*
+import kotlin.random.Random.Default.nextFloat
 
 data class Weather(val lat: Double = 55.755826, val lon: Double = 37.617299900000035, val url: String = "https://yandex.ru/pogoda/moscow") {
     var now: Int = 0

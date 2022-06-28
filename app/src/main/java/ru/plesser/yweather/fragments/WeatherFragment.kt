@@ -8,8 +8,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.gb.k_2135_2136_2.model.RepositoryLocalImpl
 import com.gb.k_2135_2136_2.viewmodel.AppState
 import ru.plesser.yweather.databinding.FragmentWeatherBinding
+import kotlin.random.Random
 
 class WeatherFragment : Fragment(){
 
@@ -33,7 +35,15 @@ class WeatherFragment : Fragment(){
             }
         })
         viewModel.sentRequest()
+
+        binding.weatherButton.setOnClickListener(View.OnClickListener {
+            var repository = RepositoryLocalImpl()
+            repository.getWeather(122.0, 122.0).weather.temp = Random.nextFloat()
+            viewModel.sentRequest()
+        })
     }
+
+
 
     companion object {
         fun newInstance() = WeatherFragment()

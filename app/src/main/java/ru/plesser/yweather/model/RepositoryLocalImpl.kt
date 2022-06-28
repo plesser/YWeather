@@ -9,6 +9,6 @@ class RepositoryLocalImpl:Repository {
     }
 
     override fun getWeather(lat: Double, lon: Double): City {
-        return City(123.0, 123.0)
+        return City.newInstance()
     }
 }

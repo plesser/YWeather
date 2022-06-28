@@ -6,4 +6,16 @@ data class City(
 ){
     val name: String = ""
     val weather: Weather = Weather(lat, lon)
+
+    companion object{
+        private var city: City
+        init {
+            city = City(123.0, 123.0)
+        }
+
+        fun newInstance(): City{
+            return city
+        }
+
+    }
 }
