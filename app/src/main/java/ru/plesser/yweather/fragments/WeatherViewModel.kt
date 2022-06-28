@@ -28,7 +28,7 @@ class WeatherViewModel(private val liveData: MutableLiveData<AppState> = Mutable
         //choiceRepository()
         liveData.value = AppState.Loading
         if((0..3).random()==2){ //FIXME
-            liveData.postValue(AppState.Error(throw IllegalStateException("что-то пошлло не так")))
+            liveData.postValue(AppState.Error("error"))
         }else{
             liveData.postValue(AppState.Success(repository.getWeather(55.755826, 37.617299900000035)))
         }
