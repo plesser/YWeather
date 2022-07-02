@@ -1,4 +1,4 @@
-package ru.plesser.yweather.learnKotlin
+package ru.plesser.yweather.learnkotlin
 
 import java.util.*
 

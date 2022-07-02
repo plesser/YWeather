@@ -1,4 +1,4 @@
-package ru.plesser.yweather.learnKotlin
+package ru.plesser.yweather.learnkotlin
 
 fun main(args : Array<String>){
     println("Hello world!")

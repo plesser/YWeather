@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import ru.plesser.yweather.databinding.ActivityWeatherBinding
+import ru.plesser.yweather.fragments.CityFragment
 import ru.plesser.yweather.fragments.WeatherFragment
 
 class WeatherActivity : AppCompatActivity() {
@@ -20,7 +21,7 @@ class WeatherActivity : AppCompatActivity() {
 
         val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment_container);
         if (currentFragment == null){
-            val fragment = WeatherFragment()
+            val fragment = CityFragment()
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, fragment)
