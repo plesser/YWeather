@@ -28,6 +28,5 @@ class WeatherActivity : AppCompatActivity() {
                 .commit()
         }
 
-
     }
 }
