@@ -21,7 +21,8 @@ class WeatherActivity : AppCompatActivity() {
 
         val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment_container);
         if (currentFragment == null){
-            val fragment = CityFragment()
+            val fragment = WeatherFragment()
+            //val fragment = CityFragment()
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, fragment)

@@ -4,6 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/lat_edittext"
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="wrap_content"
+            android:hint="lat"/>
+        <EditText
+            android:id="@+id/lon_edittext"
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="wrap_content"
+            android:hint="lon"/>
+
+        <Button
+            android:id="@+id/weather_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Получить погоду" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/city_textview"
         android:layout_width="match_parent"
@@ -29,11 +55,5 @@
         android:text="@string/zero"
         android:textColor="@color/black" />
 
-    <Button
-        android:id="@+id/weather_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:text="Получить погоду" />
 
 </LinearLayout>
